@@ -1,0 +1,26 @@
+/* Elimina márgenes predeterminados del body */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para el video background */
+#video-background {
+    position: fixed;   /* Fija el video en la pantalla */
+    right: 0;          /* Alinea a la derecha */
+    bottom: 0;         /* Alinea abajo */
+    min-width: 100%;   /* Asegura que ocupe todo el ancho */
+    min-height: 100%;  /* Asegura que ocupe todo el alto */
+    width: auto;       /* Mantiene proporción */
+    height: auto;      /* Mantiene proporción */
+    z-index: -100;    /* Coloca el video DEBAJO del contenido */
+    object-fit: cover; /* Ajusta el video para llenar el contenedor sin distorsionar */
+}
+
+/* Estilo para el contenido principal */
+#content {
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejor legibilidad */
+    color: white;                    /* Color de texto contrastante */
+    padding: 20px;
+    /* Ajusta el contenido según tus necesidades */
+}

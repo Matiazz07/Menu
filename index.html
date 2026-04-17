@@ -1,10 +1,21 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Juegos MV</title>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Background Example</title>
     </head>
-    <body>
-        <a href="https://juego-limones-eight.vercel.app">Limones</a>
-        <a href="https://juego-cazando-pi.vercel.app">Cazando</a>
-    </body>
+<body>
+
+    <video autoplay loop muted playsinline id="video-background">
+        <source src="Video_Generado_Sin_Cruz.mp4" type="video/mp4">
+        <img src="fallback-image.jpg" alt="Imagen de respaldo si el video no carga">
+        Tu navegador no soporta videos HTML5.
+    </video>
+    <div id="content">
+        <h1>Tu título</h1>
+        <p>Tu contenido principal va aquí...</p>
+    </div>
+
+</body>
 </html>
