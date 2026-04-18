@@ -3,19 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Background Example</title>
-    </head>
+    <title>Juegos MV - Arcade Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Menu.css">
+</head>
 <body>
+    <div class="portfolio-container">
+        
+        <header class="profile-section">
+            <img src="logo.png" alt="Logo MV" class="profile-logo">
+            <div class="profile-text">
+                <h1>Arcade MV</h1>
+                <p class="subtitle">Selecciona tu aventura</p>
+            </div>
+        </header>
+        
+        <main class="games-grid">
+            <a href="https://juego-limones-eight.vercel.app" class="game-card limones-theme">
+                <h2>Caza Limones</h2>
+                <p>Una aventura cítrica de reflejos rápidos. ¡Cuidado con el suelo!</p>
+                <span class="btn-play">Jugar Ahora</span>
+            </a>
 
-    <video autoplay loop muted playsinline id="video-background">
-        <source src="Video_Generado_Sin_Cruz.mp4" type="video/mp4">
-        <img src="fallback-image.jpg" alt="Imagen de respaldo si el video no carga">
-        Tu navegador no soporta videos HTML5.
-    </video>
-    <div id="content">
-        <h1>Tu título</h1>
-        <p>Tu contenido principal va aquí...</p>
+            <a href="https://juego-cazando-pi.vercel.app" class="game-card cazando-theme">
+                <h2>Cazando</h2>
+                <p>Mueve a tu personaje y atrapa la comida en este clásico de 8-bits.</p>
+                <span class="btn-play">Jugar Ahora</span>
+            </a>
+        </main>
+
+        <section class="course-info">
+            <h3>Entrenamiento Actual</h3>
+            <p><strong> Programando con JavaScript</strong><br>
+            </p>
+        </section>
+
     </div>
-
 </body>
 </html>

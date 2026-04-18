@@ -1,26 +1,172 @@
-/* Elimina márgenes predeterminados del body */
+/* --- CONFIGURACIONES GLOBALES Y FONDO --- */
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Nunito', sans-serif;
+    background-color: #0f172a; 
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* Patrón de puntos estilo retro */
+    background-image: radial-gradient(#334155 2px, transparent 2px);
+    background-size: 30px 30px;
+    background-image: url(fondo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-/* Estilo para el video background */
-#video-background {
-    position: fixed;   /* Fija el video en la pantalla */
-    right: 0;          /* Alinea a la derecha */
-    bottom: 0;         /* Alinea abajo */
-    min-width: 100%;   /* Asegura que ocupe todo el ancho */
-    min-height: 100%;  /* Asegura que ocupe todo el alto */
-    width: auto;       /* Mantiene proporción */
-    height: auto;      /* Mantiene proporción */
-    z-index: -100;    /* Coloca el video DEBAJO del contenido */
-    object-fit: cover; /* Ajusta el video para llenar el contenedor sin distorsionar */
+.portfolio-container {
+    text-align: center;
+    max-width: max-content;
+    padding: 40px; /* Aumentamos un poco el espacio interior */
+    
+    /* --- EFECTO CRISTAL (GLASSMORPHISM) --- */
+    background: rgba(15, 23, 42, 0.6); /* Fondo oscuro semi-transparente */
+    backdrop-filter: blur(2px); /* El desenfoque mágico */
+    -webkit-backdrop-filter: blur(2px); /* Soporte extra para Safari */
+    
+    /* Detalles estéticos para que el panel luzca mejor */
+    border-radius: 20px; 
+    border: 1px solid rgba(192, 132, 252, 0.2); /* Un borde morado muy sutil */
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7); /* Sombra oscura para darle profundidad */
 }
 
-/* Estilo para el contenido principal */
-#content {
-    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejor legibilidad */
-    color: white;                    /* Color de texto contrastante */
-    padding: 20px;
-    /* Ajusta el contenido según tus necesidades */
+/* --- CABECERA CON LOGO --- */
+.profile-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; 
+    margin-bottom: 40px;
+    flex-wrap: wrap; 
+}
+
+.profile-logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; 
+    object-fit: cover; 
+    object-position: center; 
+    border: 4px solid #c084fc; 
+    box-shadow: 0 0 15px rgba(147, 51, 234, 0.6), 0 5px 0 #020617; 
+}
+
+.profile-text {
+    text-align: left;
+}
+
+.profile-text h1 {
+    font-family: 'Press Start 2P', cursive;
+    color: #38bdf8;
+    text-shadow: 4px 4px 0px #1e3a8a;
+    margin: 0 0 10px 0;
+    font-size: 32px;
+    line-height: 1.4;
+}
+
+.profile-text .subtitle {
+    color: #ffffff;
+    font-size: 16px;
+    margin: 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* --- TARJETAS DE LOS JUEGOS --- */
+.games-grid {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.game-card {
+    text-decoration: none;
+    background: #1e293b;
+    border: 4px solid #38bdf8;
+    border-radius: 16px;
+    padding: 30px 20px;
+    width: 260px;
+    transition: all 0.2s ease;
+    box-shadow: 0 10px 0 #020617, 0 15px 25px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-card h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 16px;
+    margin-top: 0;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.game-card p {
+    color: #cbd5e1;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.btn-play {
+    margin-top: auto;
+    font-weight: 900;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    transition: all 0.1s;
+    color: #0f172a;
+}
+
+/* Temas específicos para cada juego */
+.limones-theme { border-color: #fde047; }
+.limones-theme h2 { color: #fef08a; text-shadow: 2px 2px 0px #ca8a04; }
+.limones-theme .btn-play { background: #fde047; box-shadow: 0 4px 0 #ca8a04; }
+
+.cazando-theme { border-color: #c084fc; }
+.cazando-theme h2 { color: #d8b4fe; text-shadow: 2px 2px 0px #9333ea; }
+.cazando-theme .btn-play { background: #d8b4fe; box-shadow: 0 4px 0 #9333ea; }
+
+/* Efecto táctil al pasar el mouse y hacer clic */
+.game-card:hover { transform: translateY(-5px); box-shadow: 0 15px 0 #020617, 0 20px 30px rgba(0,0,0,0.6); }
+.game-card:active { transform: translateY(5px); box-shadow: 0 5px 0 #020617, 0 10px 15px rgba(0,0,0,0.4); }
+.game-card:active .btn-play { transform: translateY(4px); box-shadow: 0 0px 0 transparent; }
+
+/* --- PANEL DEL CURSO --- */
+.course-info {
+    margin-top: 50px;
+    background: #1e293b;
+    border: 3px dashed #38bdf8; 
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: inset 0 0 15px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+.course-info h3 {
+    font-family: 'Press Start 2P', cursive;
+    color: #c084fc;
+    font-size: 14px;
+    text-shadow: 2px 2px 0px #4c1d95;
+    margin-top: 0;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.course-info p {
+    color: #e2e8f0;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.course-info strong {
+    color: #38bdf8;
+    font-weight: 900;
 }
