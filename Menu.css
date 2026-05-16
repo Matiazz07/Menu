@@ -248,3 +248,23 @@ body {
     box-shadow: 0 4px 0 #e60073;
     /* Efecto 3D del botón que se hunde */
 }
+
+/* --- TEMA SERPIENTE (Amarillo Neón/Retro) --- */
+.serpiente-theme {
+    border-color: #fde047;
+    /* Borde principal amarillo brillante */
+}
+
+.serpiente-theme h2 {
+    color: #fef08a;
+    /* Amarillo muy claro para el título */
+    text-shadow: 2px 2px 0px #eab308;
+    /* Sombra amarilla oscura retro */
+}
+
+.serpiente-theme .btn-play {
+    background: #fef08a;
+    /* Fondo del botón */
+    box-shadow: 0 4px 0 #eab308;
+    /* Efecto 3D del botón que se hunde */
+}
